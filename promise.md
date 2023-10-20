@@ -2,7 +2,10 @@
 비동기 처리
 
 ### 예시
-단일 Promise 처리
+
+#### 단일 Promise 처리
+
+```javascript
 requestData1()
 	.then(() => {
  		configureWithData1();
@@ -10,8 +13,9 @@ requestData1()
  	.catch((error) => {
   		alert(error.message);
 	});
+```
 
-모든 비동기 작업이 완료되면 메서드 실행
+#### 모든 비동기 작업이 완료되면 메서드 실행
 
 ```javascript
 Promise.all([
