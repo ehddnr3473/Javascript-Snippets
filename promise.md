@@ -13,6 +13,15 @@ requestData1()
  	.catch((error) => {
   		alert(error.message);
 	});
+
+// 혹은
+requestData1()
+	.then(function() {
+ 		configureWithData1();
+	})
+ 	.catch(function(error) {
+  		alert(error.message);
+	});
 ```
 
 #### 모든 비동기 작업이 완료되면 메서드 실행
