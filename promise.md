@@ -60,5 +60,45 @@ function requestData1(queryData) {
 ...
 ```
 
+#### resolve
+
+```javascript
+function performQuery() {
+	const queryData1 = {
+		a : "1",
+		b : "2"
+	};
+
+	const queryData2 = {
+		a : "3",
+		b : "4"
+	};
+
+	Promise.all([
+		requestData(queryData1),
+		requestData(queryData2)
+	]).then(function([resultList1, resultList2]){
+		resultList1.concat(resultList2);
+	}).catch(function() {
+		//
+	});
+}
+
+function requestData(queryData) {
+	return new Promise(function(resolve, reject) {
+		$.ajax({
+			url: "${contextPath}/outProductionId/ajax/selectOutProductionIds.json", 
+			type: "POST", 
+			data: queryData, 
+			success: function(response) {
+				resolve(response.resultList);
+			}, 
+			error: function() {
+				reject();
+			}
+		});
+	});
+}
+```
 
 
