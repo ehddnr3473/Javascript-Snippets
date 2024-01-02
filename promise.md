@@ -1,5 +1,5 @@
 # Promise
-비동기 처리
+Promise는 비동기 작업의 결과로서 일어나는 completion 또는 failure와 그것의 결과값을 나타낸다.
 
 ### 예시
 
