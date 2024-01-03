@@ -3,7 +3,7 @@ CSS selectors와 일치하는 document의 첫 번째 요소 반환. 존재하지
 
 <br>
 
-## Syntax
+## Examples
 ```javascript
 const myElement1 = document.querySelector(".myClass");
 const myElement2 = document.querySelector("#myId");
