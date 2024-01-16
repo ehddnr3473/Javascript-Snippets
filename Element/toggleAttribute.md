@@ -29,7 +29,7 @@ toggleAttruibute(name, force);
 const button = document.querySelector("button");
 const input = document.querySelector("input");
 
-button.addEventListner("click", () => {
+button.addEventListener("click", () => {
     input.toggleAttribute("disabled");
 });
 ```
